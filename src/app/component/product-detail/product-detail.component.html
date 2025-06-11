@@ -1,0 +1,35 @@
+<nav class="navbar bg-dark">
+    <div class="container-fluid">
+        <a href="navbar-brand" style="color: white; text-decoration: none;">E-Commerce Website</a>
+        <button routerLink="/" class="btn btn-warning text-light">Back</button>
+    </div>
+</nav>
+
+<!-- single product display -->
+ <div class="container">
+    <div class="row product-detail">
+        <div class="col-sm-3">
+            <img src="{{productdata?.images[0]}}" alt="" class="product-img">
+       <div>
+        <button class="btn btn-primary">Buy Now</button>&nbsp;
+        <button class="btn btn-success">Add to cart</button>
+       </div>
+         </div>
+  
+
+    <!-- right side -->
+     <div class="col-sm-8">
+        <div>
+            <h1>{{productdata?.title}}</h1>
+            <p style="color: green;">Special price</p>
+            <h3>Price: ${{productdata?.price}}</h3>
+            <strong>Category:&nbsp; {{productdata?.category}}</strong><br>
+            <strong>Description:</strong><br>
+            <p>{{productdata?.description}}</p>
+            <p style="color: green;">Discount:{{productdata?.discountPercentage}} %</p>
+            <strong>Stocks: {{productdata?.stock}} Units left</strong>
+
+        </div>
+     </div>
+ </div>
+   </div>
